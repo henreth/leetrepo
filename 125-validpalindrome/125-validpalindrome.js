@@ -8,3 +8,4 @@ var isPalindrome = function(s) {
     input.split('').map(i=>reverse=i+reverse)
     return input===reverse
 };
+
