@@ -1,19 +1,14 @@
-var isPalindrome = function (s) {
-	s = s.toLowerCase();
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+ var isPalindrome = function (s) {
+    let input = s.replace(/[^0-9a-z]/gi, '').toLowerCase()
 	let left = 0;
-	let right = s.length - 1;
+	let right = input.length - 1;
 
 	while (left < right) {
-		if (!isValid(s[left])) {
-			left++;
-			continue;
-		}
-		if (!isValid(s[right])) {
-			right--;
-			continue;
-		}
-
-		if (s[left] === s[right]) {
+		if (input[left] === input[right]) {
 			left++;
 			right--;
 		} else {
@@ -23,3 +18,4 @@ var isPalindrome = function (s) {
 
 	return right <= left;
 };
+// this is actually slower than my answer

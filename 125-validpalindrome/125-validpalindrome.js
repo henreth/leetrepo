@@ -9,3 +9,4 @@ var isPalindrome = function(s) {
     return input===reverse
 };
 
+//faster than the solution file
