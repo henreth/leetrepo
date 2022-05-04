@@ -1,0 +1,12 @@
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function(s) {
+    let input = s.replace(/[^0-9a-z]/gi, '').toLowerCase()
+    let firstHalf = input.slice(0,input.length/2)
+    let secondHalf = input.slice(Math.ceil(input.length/2),)
+    let newHalf = ''
+    secondHalf.split('').map(i=>newHalf=i+newHalf)
+    return firstHalf===newHalf
+};
