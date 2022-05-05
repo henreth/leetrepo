@@ -11,6 +11,4 @@
     let min = Math.min(...Object.values(obj))
     
     return Object.keys(obj).find(key => obj[key] === min );
-
-
 };
