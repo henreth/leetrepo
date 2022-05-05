@@ -3,14 +3,20 @@
  * @param {number} target
  * @return {number[]}
  */
- let twoSum = function(nums, target) {
-    let indexes = []
-    nums.map((num,i)=>{
-        nums.slice(i+1,).map((num2)=>{
-            if (num+num2==target){
-                indexes = [i,nums.indexOf(num2)]
-            }
-        })
-    })
-    return indexes
-};
+ var twoSum = function(nums, target) {
+    let targetMinusNum = {}
+     for (let num of nums) {
+         if (target - num in targetMinusNum) {
+             if (nums.indexOf(target - num) === nums.indexOf(num)) {
+                 return [nums.indexOf(target - num), nums.indexOf(num, nums.indexOf(num) + 1)]
+                 // nums.indexOf(num,nums.indexOf(num) + 1 ) 
+                //   will find the index of the value (num) after the position of nums.indexOf(num) + 1
+              } else {
+                 return [nums.indexOf(target - num), nums.indexOf(num)]
+             }
+         } else {
+             targetMinusNum[num] = true
+         }
+     }
+     return []
+ };
