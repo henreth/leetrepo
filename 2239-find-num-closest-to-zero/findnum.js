@@ -5,7 +5,7 @@
  var findClosestNumber = function(nums) {
     let obj = {}
     nums.forEach(num=>(
-        obj[num]=Math.abs(0-num)    
+        obj[num]=Math.abs(num)    
     ))
     
     let min = Math.min(...Object.values(obj))
