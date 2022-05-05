@@ -1,8 +1,4 @@
-/**
- * @param {string} s
- * @return {number}
- */
-var romanToInt = function (s) {
+function romanToInt(s: string): number {
     let symbols = {
         "I": 1,
         "V": 5,
