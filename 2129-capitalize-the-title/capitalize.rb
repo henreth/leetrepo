@@ -11,4 +11,6 @@ def capitalize_title(title)
     }
     newTitle.join(' ')
     
+    # alternative much faster solution
+    # title.split.map {|word| word.length < 3 ? word.downcase : word.capitalize}.join(" ")
 end
