@@ -8,15 +8,13 @@
     let longest = ''
     for (let char of s){
         if (sub.split('').includes(char)){
-            console.log(longest.indexOf(char))
             if (longest.length < sub.length ){
                 longest = sub
             }
-            if (longest.indexOf(char)===0){
-                
-                sub = sub.slice(1,)+char
-            } else {
+            if (longest.indexOf(char)- longest.indexOf(char,longest.indexOf(char))===1){
                 sub = char
+            } else {
+                sub = sub.slice(sub.indexOf(char)+1,) + char
             }
 
         } else {
@@ -26,6 +24,5 @@
             }
         }
     }
-    console.log(longest)
     return longest.length
 };
