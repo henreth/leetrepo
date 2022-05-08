@@ -3,6 +3,7 @@ class Solution:
     # non destructive function that returns the sorted unique values in the beginning of the array with the remaining original values at the end 
     # create counter that is also used for indexing the unique values
         x = 1
+        # counter starts at 1 in order to not skip over the first value in the array
         for i in range(len(nums)-1):
             if(nums[i]!=nums[i+1]):
                 # if the value does not equal the next value in the array
