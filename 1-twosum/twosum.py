@@ -2,6 +2,7 @@ class Solution:
    def twoSum(self, nums: List[int], target: int) -> List[int]:
        seen = {}
        for i, value in enumerate(nums): #1
+        #    enumerate iterates through a counter and values in a list
            remaining = target - nums[i] #2
            
            if remaining in seen: #3
