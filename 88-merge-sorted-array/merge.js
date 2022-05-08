@@ -10,5 +10,5 @@
     for (num of nums2.slice(0,n)){
         nums1.push(num)
     }
-    return nums1.sort((a,b)=>a-b)
+    nums1.sort((a,b)=>a-b)
 };
