@@ -6,11 +6,14 @@
     // let red=0, white=0, blue=0
     let [red,white,blue] = [0,0,0]
 
-    for(let elem of nums){ //iterate and update values based on presence
-        if(elem == 0){ white++}
-        else if ( elem == 1){ red++}
+    for(let num of nums){ //iterate and update values based on presence
+        if(num == 0){ white++}
+        else if ( num == 1){ red++}
         else{ blue++}
     }
+
+
+    // blue = (nums.length) - (white) - (red) 
 
     nums.length=0 //reset array to nothing
 
