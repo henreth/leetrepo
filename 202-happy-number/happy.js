@@ -3,7 +3,7 @@
  * @return {boolean}
  */
  var isHappy = function(n) {
-    var seen = {}; // object to store all possible values of the sumb of the squares of n's digits
+    let seen = {}; // object to store all possible values of the sumb of the squares of n's digits
     while (n !== 1 && !seen[n]) { // if n!==1 and n is not in seen, move on 
         seen[n] = true; // add n to seen 
         n = sumOfSquares(n); //and update n to the sum of the squares of n's digits
