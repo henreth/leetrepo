@@ -1,14 +1,17 @@
-function isHappy(n: number): boolean {
-    var seen = {};
-    while (n !== 1 && !seen[n]) {
-        seen[n] = true;
-        n = sumOfSquares(n);
-    }
-    return n === 1 
+function isHappy(n: number, dict: {} = {}): boolean {
+    let nums = n.toString().split('').map((x) => parseInt(x));
+    let sum = sumOfSquares(nums)
+    
+    if (dict[sum]) return false; // if the sum of the square of the digits is already in the dictionary, the num returns an infinite loop not including 1, therefore, its false
+    if (sum === 1) return true;
+    
+    dict[sum] = true;
+    
+    return isHappy(sum, dict);
 };
 
-function sumOfSquares(numString) {
-    return numString.toString().split('').reduce(function(sum, num) {
-        return sum + Math.pow(num, 2);
-    }, 0);
+function sumOfSquares(nums: number[]): number{
+    let sum = 0;
+    nums.forEach((x) => sum += x * x);
+    return sum
 }
