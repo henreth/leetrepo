@@ -12,14 +12,14 @@
     if(n <= 0) return 0;
     if(n <= 2) return n;
     
-    let one_step_before = 2;
-    let two_steps_before = 1;
-    let all_ways = 0;
+    let one_step = 2;
+    let two_steps = 1;
+    let count = 0;
     
     for(let i=2; i<n; i++){
-    	all_ways = one_step_before + two_steps_before;
-    	two_steps_before = one_step_before;
-        one_step_before = all_ways;
+        count = one_step + two_steps;
+        two_steps = one_step;
+        one_step = count;
     }
-    return all_ways;
+    return count;
 };
