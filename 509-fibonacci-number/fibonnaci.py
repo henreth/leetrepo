@@ -1,6 +1,6 @@
 class Solution:
     def fib(self, n: int) -> int:
-        if n <= 0: return 0
+        if n < 2: return n
 
         one = 0
         two = 1
