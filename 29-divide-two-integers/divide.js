@@ -38,6 +38,36 @@
     return count + helper(last, divisor);
   }
 
+  // Another Solution: fails on time limit
+  /**
+ * @param {number} dividend
+ * @param {number} divisor
+ * @return {number}
+ */
+// var divide = function(dividend, divisor) {
+//   let negative = Math.sign(dividend) * Math.sign(divisor)
+//   let ret = 0       
+//   dividend = Math.abs(dividend)
+//   divisor= Math.abs(divisor)
+//   let count = 1 
+//   let sub = divisor
+
+//   while(dividend >= divisor){
+//       if(dividend>=sub){
+//           dividend-=sub
+//           ret+=count
+//           sub=(sub<<1)
+//           count=(count<<1)
+//       }
+//       else{
+//           sub=(sub>>1)
+//           count=(count>>1)
+//       }
+//   }
+
+//   ret = negative * ret 
+//   return Math.min(Math.max(-2147483648,ret),2147483647)
+// };
 
 // My solution: fails on overflow
 //  var divide = function(dividend, divisor) {
