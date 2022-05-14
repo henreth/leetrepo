@@ -41,15 +41,14 @@
 
 // My solution: fails on overflow
 //  var divide = function(dividend, divisor) {
-//     var MAX_NEG = -2147483648;
-//     var MAX_POS = 2147483647;
+//     let MAX_NEG = -2147483648;
+//     let MAX_POS = 2147483647;
 //     if (dividend === MAX_NEG && divisor === -1) {return MAX_POS}
 //     if (dividend === MAX_POS && divisor === -1) {return MAX_NEG}
 //     if (Math.abs(divisor) === 1){return Math.sign(divisor) * dividend}
 //     if (dividend === divisor){return 1}
 //     let count = 0
-
-//     while (Math.abs(dividend)-Math.abs(divisor) >= 0){
+//     while (Math.abs(dividend)-Math.abs(divisor) > 0){
 //         dividend= Math.abs(dividend) - Math.abs(divisor)
 //         count++
 //     }
