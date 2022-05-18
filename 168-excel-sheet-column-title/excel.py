@@ -8,7 +8,7 @@ class Solution:
             # we add ord("A") to start at the alphabet
             # we subtract n - 1 because the index starts at 0 so the alphabet is actually 0-25
             # (n-1) % 26 will find how many indexes after A the intended character will be
-            n = (n - 1) // 26
+            n = (n - 1) // 26  # // divides by 26 and then rounds down the remainder
             # alter n to find the potential next character
         
         return res
