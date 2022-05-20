@@ -12,19 +12,15 @@
         let minCol = -1;
         for (let col = 0; col < matrix[row].length; col++){
             min = Math.min(min,matrix[row][col])
-            console.log(min)
             if (min === matrix[row][col]){
                 minCol = col
             }
         }
             
-    console.log(' ')
         if (minCol >= 0){
             let max = matrix[row][minCol]
             for (let row2 = 0; row2 < matrix.length; row2++){
-                // console.log(row2,'-',matrix[row2])
                 max = Math.max(max,matrix[row2][minCol])
-                // console.log(max)
             }
             if (max=== matrix[row][minCol]){
                 lucky.push(max)
@@ -35,3 +31,26 @@
 
     return lucky
 };
+
+
+// alternative solution:
+// const luckyNumbers  = matrix => {
+//     let minSet = new Set();
+//     let maxSet = new Set();
+    
+//     for (let i = 0; i < matrix.length; i++) {
+//         let min = matrix[i][0];
+//         for (let j = 0; j < matrix[0].length; j++)
+//             min = Math.min(min, matrix[i][j]);
+//         minSet.add(min);
+//     }
+//     for (let j = 0; j < matrix[0].length; ++j) {
+//         let max = matrix[0][j];
+//         for (let i = 0; i < matrix.length; ++i)
+//             max = Math.max(matrix[i][j], max);
+        
+//         if (minSet.has(max))
+//             maxSet.add(max);
+//     }
+//     return Array.from(maxSet);       
+// };
