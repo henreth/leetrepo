@@ -4,3 +4,7 @@ class Solution:
         for customer in accounts: 
             maxWealth = max(maxWealth,sum(customer))
         return maxWealth
+
+    # Alt solution:
+    # def maximumWealth(self, accounts):
+    #     return max(map(sum, accounts))

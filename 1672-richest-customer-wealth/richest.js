@@ -14,3 +14,10 @@ var maximumWealth = function(accounts) {
     
     return max
 };
+
+// alternative solution:
+// var maximumWealth = function(accounts) {
+//     return Math.max(...accounts.map(account => 
+//         account.reduce((accumulator, current) => accumulator + current, 0)
+//     ))
+// };
