@@ -1,14 +1,14 @@
 function subsets(nums: number[]): number[][] {
-    let subsets = [[]], arr= []
+    let subs = [[]], arr= []
     
     for(let num of nums){
         arr = []
-        for(let entry of subsets){
+        for(let entry of subs){
             arr.push([...entry, num])
         }
         
-        subsets.push(...arr)
+        subs.push(...arr)
     }
     
-    return subsets
+    return subs
 };
